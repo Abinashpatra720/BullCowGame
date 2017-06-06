@@ -65,6 +65,7 @@ void playGame(int number_guesses) {
 	BCGame.Reset();
 
 	// loop for answering the question
+	//TODO change in WHILE loop and add the validation of imputs and a checker for the answer
 	for (int count = 0; count < number_guesses; count++) {
 		
 		std::cout << std::endl <<"Guess number " << BCGame.getCurrentTry() << ". ";
@@ -77,5 +78,6 @@ void playGame(int number_guesses) {
 		//repeat a guess
 		std::cout << std::endl << "your guess is " << Guess << std::endl;;
 		
+		//TODO add checker for answer
 	}
 }
