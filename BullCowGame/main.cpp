@@ -1,10 +1,17 @@
+/*
+	This is the console executable that make use of the FBullCowGame class
+*/
 #include <iostream>
 #include <string>
 #include "FBullCowGame.h"
 
-void printIntro(int NUMBER_TRIES);
-void playGame(int number_guesses);
-std::string getGuess();
+using FText = std::string;
+using Int32 = int;
+
+
+void printIntro(Int32 NUMBER_TRIES);
+void playGame(Int32 number_guesses);
+FText getGuess();
 bool askToPlayAgain();
 
 FBullCowGame BCGame; //instantiate a game
@@ -12,7 +19,7 @@ FBullCowGame BCGame; //instantiate a game
 int main()
 {
 	
-	int number_guesses = BCGame.getMaxTries();
+	Int32 number_guesses = BCGame.getMaxTries();
 	
 	//introduce the game
 	printIntro(number_guesses);
@@ -28,8 +35,8 @@ int main()
 	
 }
 
-void printIntro(int NUMBER_TRIES) {
-	constexpr int WORD_LENGHT = 5;
+void printIntro(Int32 NUMBER_TRIES) {
+	constexpr Int32 WORD_LENGHT = 5;
 	
 	std::cout << "Welcome to Bulls and Cows !" << std::endl;
 	std::cout << "guess what " << WORD_LENGHT << " word isogram I'm thinking about" << std::endl;
@@ -37,9 +44,9 @@ void printIntro(int NUMBER_TRIES) {
 	return;
 }
 
-std::string getGuess() {
+FText getGuess() {
 	
-	std::string String = "";
+	FText String = "";
 	
 	std::cout << "what is you guess: ";
 	
@@ -54,24 +61,24 @@ std::string getGuess() {
 bool askToPlayAgain()
 {
 	std::cout << std:: endl << "want to play again ?" << std::endl;
-	std::string response = "";
+	FText response = "";
 	std::getline(std::cin, response);
 	
 	return (response[0] == 'y' || response[0] == 'Y');
 }
 
-void playGame(int number_guesses) {
+void playGame(Int32 number_guesses) {
 	
 	BCGame.Reset();
 
 	// loop for answering the question
 	//TODO change in WHILE loop and add the validation of imputs and a checker for the answer
-	for (int count = 0; count < number_guesses; count++) {
+	for (Int32 count = 0; count < number_guesses; count++) {
 		
 		std::cout << std::endl <<"Guess number " << BCGame.getCurrentTry() << ". ";
 		
 		//get guess from player
-		std::string Guess = getGuess();
+		FText Guess = getGuess();
 		
 
 		// TODO fix and use validation from FBullCowGame class

@@ -1,5 +1,7 @@
 #include "FBullCowGame.h"
 
+using Int32 = int;
+
 //constructor
 FBullCowGame::FBullCowGame()
 {
@@ -8,12 +10,12 @@ FBullCowGame::FBullCowGame()
 }
 
 // Getters
-int FBullCowGame::getMaxTries() const
+Int32 FBullCowGame::getMaxTries() const
 {
 	return maxTries;
 }
 
-int FBullCowGame::getCurrentTry()const
+Int32 FBullCowGame::getCurrentTry()const
 {
 	return currentTry;
 }
@@ -31,7 +33,7 @@ void FBullCowGame::Reset()
 {
 
 	//magic numbers are bad
-	constexpr int MAX_NUMBER_TRIES = 8;
+	constexpr Int32 MAX_NUMBER_TRIES = 8;
 	
 	maxTries = MAX_NUMBER_TRIES;
 	
@@ -41,7 +43,7 @@ void FBullCowGame::Reset()
 }
 
 //Reset a game at the end with different tries
-void FBullCowGame::Reset(int newMaxTries)
+void FBullCowGame::Reset(Int32 newMaxTries)
 {
 	maxTries = newMaxTries;
 
@@ -53,7 +55,7 @@ void FBullCowGame::Reset(int newMaxTries)
 
 
 //TODO complete the method
-bool FBullCowGame::checkGuessValidity(std::string)
+bool FBullCowGame::checkGuessValidity(FString)
 {
 	return false;
 }

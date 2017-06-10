@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 
+using FString = std::string;
+using Int32 = int;
+
 class FBullCowGame
 {
 public:
@@ -9,19 +12,19 @@ public:
 	
 
 	//getters
-	int getMaxTries() const;
-	int getCurrentTry() const;
+	Int32 getMaxTries() const;
+	Int32 getCurrentTry() const;
 	bool isGameWon() const;
 	//
 
 	void Reset();
-	void Reset( int newMaxTries);
+	void Reset( Int32 newMaxTries);
 
-	bool checkGuessValidity(std::string);
+	bool checkGuessValidity(FString);
 
 	//TODO add method to check if game is won
 private:
-	int maxTries;
-	int currentTry;
+	Int32 maxTries;
+	Int32 currentTry;
 
 };
