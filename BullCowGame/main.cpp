@@ -5,6 +5,7 @@
 #include <string>
 #include "FBullCowGame.h"
 
+
 using FText = std::string;
 using Int32 = int;
 

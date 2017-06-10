@@ -1,3 +1,6 @@
+/*
+	MAiTHis file contain all the method to make the game 
+*/
 #include "FBullCowGame.h"
 
 using Int32 = int;
