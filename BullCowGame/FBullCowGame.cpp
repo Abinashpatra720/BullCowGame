@@ -3,7 +3,7 @@
 */
 #include "FBullCowGame.h"
 
-using Int32 = int;
+using int32 = int;
 
 //constructor
 FBullCowGame::FBullCowGame()
@@ -13,12 +13,12 @@ FBullCowGame::FBullCowGame()
 }
 
 // Getters
-Int32 FBullCowGame::getMaxTries() const
+int32 FBullCowGame::getMaxTries() const
 {
 	return maxTries;
 }
 
-Int32 FBullCowGame::getCurrentTry()const
+int32 FBullCowGame::getCurrentTry()const
 {
 	return currentTry;
 }
@@ -36,7 +36,7 @@ void FBullCowGame::Reset()
 {
 
 	//magic numbers are bad
-	constexpr Int32 MAX_NUMBER_TRIES = 8;
+	constexpr int32 MAX_NUMBER_TRIES = 8;
 	
 	maxTries = MAX_NUMBER_TRIES;
 	
@@ -46,7 +46,7 @@ void FBullCowGame::Reset()
 }
 
 //Reset a game at the end with different tries
-void FBullCowGame::Reset(Int32 newMaxTries)
+void FBullCowGame::Reset(int32 newMaxTries)
 {
 	maxTries = newMaxTries;
 

@@ -2,7 +2,7 @@
 #include <string>
 
 using FString = std::string;
-using Int32 = int;
+using int32 = int;
 
 class FBullCowGame
 {
@@ -12,19 +12,19 @@ public:
 	
 
 	//getters
-	Int32 getMaxTries() const;
-	Int32 getCurrentTry() const;
+	int32 getMaxTries() const;
+	int32 getCurrentTry() const;
 	bool isGameWon() const;
 	//
 
 	void Reset();
-	void Reset( Int32 newMaxTries);
+	void Reset( int32 newMaxTries);
 
 	bool checkGuessValidity(FString);
 
 	//TODO add method to check if game is won
 private:
-	Int32 maxTries;
-	Int32 currentTry;
+	int32 maxTries;
+	int32 currentTry;
 
 };
